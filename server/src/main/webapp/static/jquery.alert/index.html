@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery弹出层插件-jQuery Alert V1.2 -by老奔-www.luocheng.cn</title>
+
+<link rel="stylesheet" type="text/css" href="jquery.alert.css"/>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.easydrag.js"></script>
+<script type="text/javascript" src="jquery.alert.js"></script>
+
+<style>
+
+body {
+    font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#444444;
+	margin:0;
+	padding:0;
+}
+table,th,td{
+font-size:12px;
+}
+.box{
+margin:20px;
+}
+</style>
+
+
+<script>
+$(document).ready(function(){
+
+	$("#a").click( function() {
+		$.alerts.okButton="确定";
+		jAlert("公司名称必须填写！",'提示');
+		return false;
+	});
+
+	$("#b").click( function() {
+		jConfirm('你确定要删除该产品吗？', '请确定',function(res){alert(res);});
+		return false;
+	});
+
+
+	$("#c").click( function() {
+		jPrompt('请输入你要设定的值：', '请输入', '20');
+		return false;
+	});
+
+	$("#d").click( function() {
+		jIframe('http://www.luocheng.cn/', '老奔博客','460','150');
+		return false;
+	});
+
+	$("#e").click( function() {
+		var html='<table border="0" cellpadding="0" cellspacing="0"><tr><td width="5%"><input name="id" id="checkall" type="checkbox" value="" /></td><td width="20%">代金券编号</td><td width="25%">类型</td><td width="20%">面值</td><td width="18%">生效时间</td><td width="18%">失效时间</td></tr>';
+		html+='<tr><td><input name="ids[]" type="checkbox" value="111111" /></td><td>111111</td><td>邀请好友返利</td><td>10元</td><td>2011-06-17</td><td>2011-08-30</td></tr>';
+		html+='<tr><td><input name="ids[]" type="checkbox" value="222222" /></td><td>222222</td><td>注册返利</td><td>5元</td><td>2011-06-17</td><td>2011-08-30</td></tr>';
+		html+='</table>';
+		jChoose(html, '请选择代金券','460','100',function(res){
+			if(res){
+				alert(res.html());
+			}
+		});
+
+		$("#checkall").click( function() {
+			alert("checkall");
+		});
+		return false;
+	});
+	
+	$("#f").click( function() {
+		jHtml('<h2>与jChoose主要区别：</h2><ol><li>没有确定及取消按钮</li><li>没有回调函数</li></ol>', '注意事项','460','300');
+		return false;
+	});
+
+});
+</script>
+<div class="box">
+<p><a href="javascript:;" id="a">确定型</a></p>
+
+<p><a href="javascript:;" id="b">确定/取消型</a></p>
+
+<p><a href="javascript:;" id="c">输入型</a></p>
+
+<p><a href="javascript:;" id="d">嵌入页面型</a></p>
+
+<p>注意：绑定的点击事件必须要返回false 否则ie6下无法实现jIframe</p>
+
+<p><a href="javascript:;" id="e">选择交互型</a></p>
+
+<p><a href="javascript:;" id="f">HTML片段型</a></p>
+
+</div>
+</body>
+
+</html>

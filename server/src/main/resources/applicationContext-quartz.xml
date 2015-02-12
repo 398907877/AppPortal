@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<!-- bean -->
+    <bean id="updateAuthCfg" class="com.huake.saas.redis.quartz.UpdateAuthCfg" />
+    <!-- 定义调用对象和调用对象的方法 -->
+    <bean id="updateAuthCfgDetail"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 调用的类 -->
+        <property name="targetObject" ref="updateAuthCfg" />
+        <!-- 调用类中的方法 -->
+        <property name="targetMethod" value="doUpdateAuthCfg" />
+        <!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
+        <property name="concurrent" value="false"/>
+    </bean>
+         
+    <!-- quartz-2.x的配置 -->
+     <!-- 定义触发时间 -->
+    <bean id="updateAuthCfgTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="updateAuthCfgDetail" />
+        </property>
+        <property name="cronExpression">
+            <value>0 0 0 * * ?</value>
+        </property>
+    </bean>
+    <!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序  -->
+    <!-- 如果lazy-init='true',则需要实例化该bean才能执行调度程序 -->
+    <bean name="startQuertz" lazy-init="false" autowire="no"
+        class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="updateAuthCfgTrigger" />
+            </list>
+        </property>
+    </bean>
+</beans>

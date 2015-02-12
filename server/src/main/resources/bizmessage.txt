@@ -1,0 +1,5 @@
+member_not_found=会员不存在
+password_do_not_match=密码输入不正确
+login_name_has_repeat=该登录名已存在
+member_not_login=会员未登录
+login_name_repetition=登陆名重复

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html> 
+	<head> 
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	    <title>title</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<link href="http://static.yqkan.com.cn/static/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	    <link href="http://static.yqkan.com.cn/static/mobile/news.css" type="text/css" rel="stylesheet">
+	    <script>
+			document.createElement( "picture" );
+		</script>
+	    <script type="text/javascript" src="http://static.yqkan.com.cn/static/mobile/picturefill.min.js"></script>
+	</head> 
+	
+	<body id="news">
+		<div class="container">
+		    <div class="row">
+		        <div class="col-xs-12 col-md-12 col-lg-12">
+		            <div class="header">
+		                <h4 id="news-name">这里是标题</h4>
+		                <p class="news-info">
+		                    <span id="post-date" class="news-meta no-extra">2014-06-17</span>
+		                </p>
+		            </div>
+		            <div class="page-content">
+		            	<blockquote class="bs-callout bs-callout-info">这里描述</blockquote>
+		            	<div class="text-wrap">
+		            		<picture>
+								<source srcset="../mobile/images/large.jpg" media="(min-width: 600px)">
+								<!-- srcset 为指定的文件完整URL，根据上传图片的地址，替换，后台需要对图像做裁减处理 -->
+								<source srcset="../mobile/images/medium.jpg" media="(min-width: 300px)">
+								<img srcset="../mobile/images/small.jpg" alt="">
+							</picture>
+		            		<p>这里文本</p>
+		            	</div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    </body>
+</html>
+

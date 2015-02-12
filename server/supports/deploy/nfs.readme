@@ -1,0 +1,3 @@
+多服务器文件共享设置
+1、确保44与43服务器nfs服务已启动
+2、在43上以root操作mount -t nfs 192.168.1.44:/home/www/data /home/www/data

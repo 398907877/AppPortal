@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0;margin: 0;}
+body {font-family: '微软雅黑','黑体','宋体', Verdana, sans-serif; font-size:14px;}
+table {border-collapse: collapse;border-spacing: 0;}
+img{ display:block; border:none;} a{ text-decoration:none;}
+ul li{ list-style:none;}
+.fl{ float:left;} .fr{ float:right;}.clear{ clear:both;}
+.hide{ display:none;}
+/*banner轮播*/
+.bg_6d{ background:#dddddd;}
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe>ol{height:20px;position: relative;z-index:10;margin-top:-25px;text-align:right;padding-right:20px;background-color:rgba(0,0,0,0.5);}
+.box_swipe>ol>li{display:inline-block;margin:5px;width:10px;height:10px;background-color:#4a4d45;border-radius: 10px;}
+.box_swipe>ol>li.on{background-color:#fff;}
+
+.fd_main_wrap{ padding:5px; margin-bottom:55px;}
+.bar01,.bar02{  float:left;width:48%; padding:1%; }
+.bar01 a,.bar02 a{height:80px;display:block; font-size:18px; color:#fff; text-align:center; padding-top:15px}
+.bar02 a{height:40px; padding-top:5px; font-size:12px;}
+.bar01 a img{ margin:0 auto 5px; width:40px; height:40px;}
+.bar02 a img{ margin:0 auto 0; width:20px; height:20px;}
+.b_bg01{ background:#1d77bc}
+.b_bg02{background:#9d2c2c}
+.b_bg03{background:#d16158}
+.b_bg04{background:#e97f12}
+.b_bg05{background:#5ab41e}
+.fd_menu{ width:100%; height:50px; background:url(../../../images/website/fuda/menu_bg.jpg) repeat-x left top ; text-align:center; position:fixed; bottom:0; left:0;z-index:80;}
+.fd_menu a{ float:left; width:20%; height:100%; background:url(../../../images/website/fuda/menu_side.jpg) right bottom no-repeat; background-size:2px 48px;color:#FFFFFF; font-size:12px;}
+.fd_menu a:last-child{ background:none;}
+.fd_menu img{ width:25px; height:25px; margin:5px auto 0;}
+/*资讯文章*/
+.t_nav{   width:100%;position:fixed;top:0;text-align:center; background:#ededed; border:1px solid #ededed; padding:10px 0; box-shadow:0 1px 2px #c9c9c9;}
+.t_nav a{ display:inline-block; padding:5px; margin-right:10px; color:#5f5f5f; font-size:16px; }
+.t_nav a.cur{ background:#c61515; border-radius:5px; color:#fff;box-shadow:inset -1px -1px 2px #eeeeee}
+.news_wrap{ padding:0 10px; margin:60px 0;}
+.pic_text ul li{ padding:10px 0;border-bottom:1px solid #d1d1d1;}
+.news_content img{ max-width:100%;}
+.pic_text img{ float:left; width:100px; height:100px; margin-right:10px;}
+.pic_text dl dt{color:#210202;  font-size:16px; margin-bottom:5px;}
+.pic_text dl dd{ color:#4b0505; text-indent:2em;}
+/*通讯录*/
+.contact{ margin-bottom:60px;}
+.contact_slt{height:38px; line-height:38px; background:#019b79; text-align:center; color:#fff; font-size:18px;}
+.contact_slt a{ width:50%; float:left; color:#fff;}
+.contact_slt a.cur{ background:#01644f;}
+.search{ padding:0 10px; margin:10px 0;}
+.search dd { margin-right:70px;}
+.search dd input{ width:100%; border:1px solid #02996c; height:34px;border-radius:5px; }
+.search dl dt{ float:right;}
+.search dl dt button{ width:55px; height:30px; border:none; margin-top:3px; background:url(../../../images/website/fuda/icon_search.jpg) no-repeat; background-size:53px 30px;}
+.contact_list{ margin:10px 0;}
+.contact_list ul li{ height:30px; line-height:30px;padding:0 10px;}
+.contact_list ul li:nth-child(2n){ background:#ebebeb;}
+.contact_list ul li a{ color:#595959; display:block;}
+.c_outline{ padding:0 10px; margin:10px 0; color:#595959; line-height:1.4; font-size:13px;}
+.c_outline a{ color:#e7714d; margin-left:5px}
+.staff{ position:fixed;z-index:777; top:50px; left:50%; width:280px; padding:10px; border:1px solid #969494; border-radius:5px; margin-left:-150px; background:#fff; color:#595959;}
+.staff .close{ position:absolute; right:-6px; top:-12px; color:#8f8e8e; font-weight:bold; font-size:18px; color:red;}
+.staff img{ float:left; margin-right:10px; width:100px; height:100px;}
+.staff dl{ line-height:1.6}
+.staff p{ padding-top:10px;}
+.gs_info{ padding:10px;color:#595959;line-height:1.4;}
+/* 用户注册  */
+.register {margin:10px 10px 60px; background:#fff; border:1px solid #ddd; border-radius:5px; color:#333333;}
+.register  p a{ color:#333333; }
+.register  p{ margin:20px auto 0; width:300px;position:relative;}
+.register  p span{ display:block; position:absolute;  width:100%; text-align:center; color:#FF0000;}
+.register p input{border:1px solid #ddd; padding-left:5px; height:30px; line-height:normal; vertical-align:middle;}
+.register label{ display:inline-block;width:75px; font-size:14px; text-align:center;}
+.register  a.blue{color:blue; text-decoration:underline; margin-left:-15px;}
+.register  p .re_btn{ display:block; width:90px; height:30px; line-height:30px; border:none; border-radius:5px;color:#fff;background:-webkit-linear-gradient(top,#63B908, #459605) ;background:-moz-linear-gradient(top,#63B908, #459605);margin:20px auto;}
+.register  p span.no{ background:url(../../../images/website/mall/error.jpg) no-repeat; background-position:27% 4px; background-size:18px 16px;}
+.register  p.yes{ background:url(../../../images/website/mall/rigth.jpg) no-repeat; background-position:240px 3px; background-size:20px 18px;}
+.register  p.yzm input{ width:140px;}
+.register  p.yzm button{ height:24px; text-align:center; vertical-align:middle; background: #CCCCCC; color:#FFFFFF; border-radius:3px; border:none; width:70px; }
+.register  p.login_ts{ margin-bottom:15px; text-align:center;}
+/*--遮罩--*/
+.mask_layer{ position:fixed; top:0; right:0; bottom:0; left:0; background:black; z-index:666; opacity:0.1; }
+
+

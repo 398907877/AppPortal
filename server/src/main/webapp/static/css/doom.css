@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0;margin: 0;}
+body {font-family: '微软雅黑','黑体','宋体', Verdana, sans-serif; font-size:14px;}
+table {border-collapse: collapse;border-spacing: 0;}
+img{ display:block; border:none;} a{ text-decoration:none;}
+ul li{ list-style:none;}
+.fl{ float:left;} .fr{ float:right;}.clear{ clear:both;}
+.pd0_5{ padding:0 5px; }
+.bg_6d{background:#dddddd}
+/*预约*/
+
+.yy_opt table{ border:1px solid #c1c1c1; background:#FFFFFF; margin:10px 0;font-size:12px; width:100%; text-align:center;}
+.yy_opt table tr{ border:1px solid #c1c1c1; line-height:1.8;height:38px;}
+.push01{ background:url(../images/appoint/icon_push01.png) no-repeat center center;  background-size:20px 20px;}
+.push02{ background:url(../images/appoint/icon_push02.png) no-repeat center center;  background-size:20px 20px;}
+.me_yy{ font-size:16px; height:42px; line-height:42px;border-radius:5px; border:1px solid #c1c1c1; background:#FFFFFF; margin:10px 0; padding:0 5px; color:#434243;}
+.me_yy a{color:#434243;}
+.me_yy span{ display:block; width:100%;background:url(../images/appoint/icon_rr.png) right center no-repeat;}
+.me_yy span i{ float:right; font-style:normal; background:#f04343; width:20px; height:20px; line-height:20px ;text-align:center;border-radius:10px; color:#FFFFFF; margin:10px 20px 0 0; font-size:12px;}
+.add_phone a{color:#434243;}
+.add_phone {border-radius:5px; border:1px solid #c1c1c1; background:#FFFFFF;color:#434243;margin:10px 0;} 
+.add_phone p span{display:block;background:url(../images/appoint/icon_rr.png) right center no-repeat; padding-left:20px;}
+.add_phone p{ overflow:hidden;padding:15px 5px;}
+.add{background: url(../images/appoint/icon_add.png) 5px center no-repeat;border-bottom:1px solid #c1c1c1; background-size:15px 17px}
+.phone{background: url(../images/appoint/icon_phone.png) 5px center no-repeat;background-size:16px 18px}
+.yy_table{border-radius:5px; border:1px solid #c1c1c1; background:#FFFFFF; margin-bottom:10px; padding-bottom:10px}
+.yy_table h2{ font-size:16px; font-weight:normal; color:#434243; padding:0 10px;line-height:42px; height:42px;border-bottom:1px solid #c1c1c1;background: -moz-linear-gradient(center top , #ffffff, #e5e3e3) ; border-radius:5px 5px 0 0; margin-bottom:10px;}
+.put_text{ padding:0 5px; height:42px; line-height:42px; overflow:hidden;}
+.put_text span , .put_area span{width:28%; color:#000000; float:left; }
+.put_text input{width:70%; float:right;height:30px; line-height:30px;border-radius:5px; border:1px solid #c1c1c1; margin-top:6px; color:#a2a2a2; padding-left:5px;}
+.yy_time{width:70%; float:right;height:30px; line-height:30px; margin-top:6px; color:#a2a2a2;}
+.yy_time i{ margin:0 5px; font-style:normal;}
+.yy_time select{ padding-right:10px;}
+.put_area {padding:0 5px;}
+.put_area textarea{width:70%; float:right;border-radius:5px; border:1px solid #c1c1c1;padding-left:5px; height:70px; overflow:hidden;resize:none; font-size:14px; color:#a2a2a2;}
+.yy_btn{ height:42px; line-height:42px; font-size:20px; width:100%; border:none; text-align:center; color: #FFFFFF; background:#f04343;border-radius:6px; margin-bottom:10px;}
+/*预约记录*/
+.yy_record{ border-radius:5px; margin:20px 10px;box-shadow:0 0 5px #C1C1C1; background: #FFFFFF; overflow:hidden;}
+.yy_record p{ line-height:1.5; padding:5px; color:#333333;}
+.yy_record p span{ color:#000000; margin-right:5px;}
+.yy_record p:nth-last-of-type(1){  border-bottom:1px solid #eeeeee ;}
+.yy_record  button{ margin:5px auto; display:block; background:#FF6633; color:#FFFFFF; border:none; border-radius:3px; height:26px; line-height:26px; width:60px; font-weight:bold;}

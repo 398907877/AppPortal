@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0;margin: 0;}
+body {font-family: '微软雅黑','黑体','宋体', Verdana, sans-serif; font-size:14px; height:auto;}
+table {border-collapse: collapse;border-spacing: 0;}
+img{ display:block; border:none;} a{ text-decoration:none;}
+ul li{ list-style:none;}
+.fl{ float:left;} .fr{ float:right;}.clear{ clear:both;}
+/*会员卡*/
+.member_bg{ background:url(../images/coupon/member_bg.png) repeat-x #ededed;background-size:320px 77px;}
+.member_card_space{ width:320px; margin:20px auto 0; position:relative;z-index:1}
+.member_card_space h2{ text-align:right; padding-right:60px; font-weight:normal; color:#7f7f7f; font-size:14px; background:url(../images/coupon/icon_card.png) no-repeat 60px center;}
+.member_card{width:270px;height:170px; margin:0 auto 10px; position:relative;}
+.member_card img{width:270px;height:170px;}
+.member_confirm_wrap{width:100%;height:100%; position:absolute; top:0; left:0;}
+.member_confirm{ position:absolute; width:290px;height:80px; margin:0 15px; bottom:0; background: url(../images/coupon/msk.jpg)  no-repeat #ededed; background-size:290px auto;}
+.member_btn{ background:url(../images/coupon/msk_btn.jpg) no-repeat;background-size:100% 40px; width:240px; height:40px; line-height:40px; text-align:center; margin:10px auto; border:none; display:block; color:#4d4c4c; cursor:pointer;}
+.member_confirm p{ text-align:center; color:#7f7f7f; font-size:12px;}
+.card_explain{ margin:0 10px;}
+.card_jifen{border:1px solid #c6c4c4; border-radius:5px; padding:5px 0; background:#FFFFFF; margin:10px 0;}
+.card_jifen dl{ width:49%; text-align:center; float:left;}
+.card_list{border:1px solid #c6c4c4; border-radius:5px; margin:10px 0; background:#FFFFFF; }
+.card_list li{ border-bottom:1px solid #c6c4c4; padding:0 10px;}
+.card_list li a{ width:100%; display:block; height:38px; line-height:38px; color:#000000; background:url(../images/coupon/arrow2.png) right center no-repeat; background-size:10px 12px; }
+.card_list li:nth-last-of-type(1){ border:none;}
+/*消费确认*/
+.mask_layer{ position:fixed; top:0; right:0; bottom:0; left:0; background:black; z-index:990; opacity:0.6; }
+.pay_confirm_wrap{ width:100%; height:auto;}
+.pay_confirm{ width:300px; margin:0 auto; background:#FFFFFF; overflow:hidden; border:1px solid #CCCCCC;}
+.pay_confirm h2{ height:30px; line-height:30px; text-align:center; color:#747474; background:#ececec; font-weight:normal; font-size:16px;}
+.pay_confirm h2 a{ float:right; width:12px; height:30px; background:url(icon_close.png) no-repeat center center; margin-right:10px;}
+.pay_input{ padding:0 10px; border-bottom:1px solid #e3e2e1;}
+.pay_input p{ margin:20px 0;height:30px; line-height:30px;}
+.pay_input span{color:#747474; float:left;height:30px; line-height:30px;}
+.pay_input input{ width:190px; height:28px; line-height:28px; border:1px solid #e3e2e1; background:#f8f8f8; color:#c6c6c6; padding-left:5px; display:block; float:right;}
+.pay_btn{ margin:10px auto; width:100px; height:36px; line-height:36px; text-align:center; display:block; border:none; background:#e7563f; color:#FFFFFF; font-size:16px;}
+/*消费记录*/
+.mr_defray{ padding:5px}
+.mr_defray table{ width:100%;background:#FFFFFF; margin:10px 0;}
+.mr_defray table tr{border:1px solid #CCCCCC;}
+.mr_defray table td{ width:50%; height:26px; line-height:26px; padding-left:10px; color:#3d3d3d;}
+.mr_defray table td span{ font-size:12px; color:#6e6c6c;}
+/*会员卡说明*/
+.mr_explain_wrap{ padding:0 5px;}
+.mr_explain_tit{ color:#FFFFFF; height:77px; line-height:77px; font-size:24px; }
+.mr_explain_content{ max-width:400px; margin:10px auto; background: #FFFFFF; padding:5px;border-radius:5px; box-shadow:0 0 5px #CCCCCC}
+.mr_explain_content h2{ color:#1a1717; background:url(../images/coupon/icon_card02.png) center left no-repeat; padding-left:40px; font-size:18px; font-weight:normal;}
+.mr_explain_content ul{ background:#ededed; padding:5px; color:#787878; margin-top:10px;}
+.mr_explain_content ul li{ line-height:1.5;}
+/*个人资料*/
+.member_tit{ padding:0 10px; height:76px; line-height:76px; color:#FFFFFF; font-size:24px; margin-bottom:5px;}
+.member_data{ padding:5px;}
+.yy_table{border-radius:5px; border:1px solid #c1c1c1; background:#FFFFFF; margin-bottom:10px; padding-bottom:10px;}
+.yy_table h2{ font-size:16px; font-weight:normal; color:#434243; padding:0 10px;line-height:42px; height:42px;border-bottom:1px solid #c1c1c1;background: -moz-linear-gradient(center top , #ffffff, #e5e3e3) ; border-radius:5px 5px 0 0; margin-bottom:10px;}
+.put_text{ padding:0 5px; height:42px; line-height:42px; overflow:hidden;}
+.put_text i,.put_area i{ display:block; width:2%; height:42px; float:left; color:red;}
+.member_data .put_text span , .member_data .put_area span{width:26%; color:#000000; float:left; text-align:center; }
+.put_text input{width:70%; float:right;height:30px; line-height:30px;border-radius:5px; border:1px solid #c1c1c1; margin-top:6px; color:#a2a2a2; padding-left:5px;}
+.put_area {padding:0 5px;}
+.put_area textarea{width:70%; float:right;border-radius:5px; border:1px solid #c1c1c1;padding-left:5px; height:70px; overflow:hidden;resize:none; font-size:14px; color:#a2a2a2;}
+.yy_btn{ height:42px; line-height:42px; font-size:20px; width:100%; border:none; text-align:center; color: #FFFFFF; background:#f04343;border-radius:6px; margin-bottom:10px;}
+/*优惠劵选择*/
+.bg_ed{ background:#ededed;}
+.yhj_list{width:270px; margin:0 auto;}
+.yhj_list li{ margin:20px 0; }
+.yhj_list li a{ width:270px; height:170px; display:block;}
+.yhj_list li a img{ width:270px; height:170px; }
+/*分享提示*/
+.mask_layer{ position:fixed; top:0; right:0; bottom:0; left:0; background:black; z-index:998; opacity:0.6; }
+.turntable_fx{position:fixed; z-index:999; top:10%; right:10%; width:200px; height:200px; background:pink; background:url(tips_fx.png) no-repeat;
+background-size:100% 100%;}
+

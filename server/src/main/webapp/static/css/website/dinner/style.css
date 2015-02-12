@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0;margin: 0;}
+body {font-family: '微软雅黑','黑体','宋体', Verdana, sans-serif;}
+table {border-collapse: collapse;border-spacing: 0;}
+img{ display:block; border:none;} a{ text-decoration:none;}
+ul li{ list-style:none;}
+.fl{ float:left;} .fr{ float:right;}.clear{ clear:both;}
+.mt42{ margin-top:42px;}.pd40{ padding-bottom:40px;} .relative{ position:relative}
+/*banner轮播*/
+.bg_6d{ background:#dddddd;}
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe>ol{height:20px;position: relative;z-index:10;margin-top:-25px;text-align:right;padding-right:20px;background-color:rgba(0,0,0,0.5);}
+.box_swipe>ol>li{display:inline-block;margin:5px;width:10px;height:10px;background-color:#6a4459;border-radius: 10px;}
+.box_swipe>ol>li.on{background-color:#dededc;}
+.cy_nav_wrap{ padding:1%;}
+.cy_nav li{ width:48%; margin:1%; height:120px;float:left;text-align:center;}
+.cy_nav li a{ display:block; width:100%; height:100%; color:#FFFFFF; font-size:16px; font-weight:bold;}
+.cy_nav li dl{padding-top:35px;}
+.cy_nav li dt{ width:80px; margin:0 auto; height:40px; margin-bottom:5px;}
+.cy_nav li dt img{ margin:0 auto; width:40px; height:40px;}
+.cNav01{ background:#c22b20;} .cNav02{background:#d26159;} .cNav03{background:#d39119;} .cNav04{background:#74d434;} .cNav05{background:#bf64ff;} .cNav06{background:#e6754d;}
+.cy_menu{ height:50px; background:url(../../../images/website/dinner/menu_bg.jpg) repeat-x left top ; text-align:center;}
+.cy_menu a{ float:left; width:20%; height:100%; background:url(../../../images/website/dinner/menu_side.jpg) right bottom no-repeat; background-size:2px 48px;color:#FFFFFF; font-size:12px;}
+.cy_menu a:last-child{ background:none;}
+.cy_menu img{ width:25px; height:25px; margin:5px auto 0;}

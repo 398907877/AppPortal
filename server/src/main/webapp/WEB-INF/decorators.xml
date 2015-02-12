@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>/api/*</pattern>
+		<pattern>/portal/*</pattern>
+		<pattern>/weixin/*</pattern>
+		<pattern>/mgr/crm/tenancy/show**</pattern>
+		<pattern>/mgr/customer/show**</pattern>
+		<pattern>/mgr/forumUser/show**</pattern>
+		<pattern>/mgr/events/**/show</pattern>
+		<pattern>/mgr/**/detail/**</pattern> 
+		<pattern>/mgr/**/many/**/info</pattern> 
+		<pattern>/mgr/supply/type/create</pattern> 
+		<pattern>/mgr/auth/more**</pattern> 
+	</excludes>
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	<decorator name="mobile-site" page="m.jsp">
+		<pattern>/m/*</pattern>
+	</decorator>
+</decorators>

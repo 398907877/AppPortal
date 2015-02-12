@@ -1,0 +1,167 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page session="false"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>新闻资讯</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="${ctx}/static/ratchet/css/ratchet.min.css">
+    <script src="${ctx}/static/ratchet/js/ratchet.min.js"></script>
+    <script src="${ctx}/static/js/jquery.js"></script>
+  </head>
+  <body>
+<!-- 
+<div id="category" class="popover">
+    <header class="bar bar-nav">
+        <h1 class="title">新闻类型</h1>
+    </header>
+    <ul class="table-view">
+    	<li class="table-view-cell">
+    		<a class="navigate-right" href="${ctx}/m/news/index?UID=${UID}" target="_self" data-transition="slide-in">
+			  全部新闻
+			</a>
+		</li>
+    	<c:forEach var="category" items="${categories}">
+    		  <li class="table-view-cell">
+			    <a class="navigate-right" href="${ctx}/m/news/index?UID=${UID}&categoryId=${category.id}" target="_self" data-transition="slide-in">
+			      ${category.name}
+			    </a>
+			  </li>
+		</c:forEach>
+    </ul>
+</div>
+ -->
+<div id="category" class="popover">
+    <header class="bar bar-nav">
+        <h1 class="title">新闻类型</h1>
+    </header>
+    <ul class="table-view">
+        <li class="table-view-cell">类型1</li>
+        <li class="table-view-cell">类型2</li>
+        <li class="table-view-cell">类型3</li>
+        <li class="table-view-cell">类型4</li>
+        <li class="table-view-cell">类型5</li>
+        <li class="table-view-cell">类型6</li>
+        <li class="table-view-cell">类型7</li>
+        <li class="table-view-cell">类型8</li>
+    </ul>
+</div>
+
+
+    <header class="bar bar-nav">	
+      <a class="pull-right" href="#category">
+            <span class="icon icon-w3c-list" style="font-size: 18px;">分类</span></a> 
+      <h1 class="title">新闻资讯</h1>
+    </header>
+
+    <div class="content">
+
+      <div class="slider">
+        <div class="slide-group">
+	      	<c:forEach var="new" items="${news.content}">
+	      		<c:choose>
+					<c:when test="${new.banner eq '1' }">
+						<div class="slide">
+							<a class="" href="${new.url}">
+			      				<img src="${new.pic}" alt="Argo" width="100%" height="50%">
+			      			</a>
+			      		</div>
+					</c:when>
+					<c:otherwise>
+						
+					</c:otherwise>
+				</c:choose>
+		      		
+	      	</c:forEach> 
+        </div>
+      </div>
+
+      <ul class="table-view" id="table-view">
+      <script>
+        alert("${category.name}");
+      </script>
+      	<c:choose>
+			<c:when test="${category.name eq null }">
+				<li class="table-view-cell table-view-divider">新闻资讯</li>
+			</c:when>
+			<c:otherwise>
+				<li class="table-view-cell table-view-divider">新闻资讯--${category.name}</li>
+			</c:otherwise>
+		</c:choose>
+      
+		<c:forEach var="new" items="${news.content}">
+			  <li class="table-view-cell media">
+			    <a class="" href="${new.url}">
+			      <img class="media-object pull-left" width="92px" height="62px" src="${new.pic}">
+			      <div class="media-body">
+			      	${new.title}
+			        <p>
+			         <c:choose> 
+    					<c:when test="${fn:length(new.intro)>10 }"> 
+     						<c:out value="${fn:substring(new.intro,0,10) }..." /> 
+    					</c:when> 
+    					<c:otherwise> 
+     						<c:out value="${new.intro}" /> 
+    					</c:otherwise> 
+   					</c:choose>
+			       </p>
+			      </div>
+			      <c:choose>
+					<c:when test="${new.stick eq null }">
+					
+					</c:when>
+					<c:otherwise>
+						<span class="badge badge-negative">置顶</span>
+					</c:otherwise>
+				</c:choose>
+			      
+			    </a>
+			  </li>
+		  </c:forEach>
+		  
+      </ul>
+
+     <div style="padding: 14px 40px;">
+       <input type="hidden" id="UID" name="UID" value="${UID}"/>
+       <input type="hidden" id="categoryId" name="categoryId" value="${categoryId}"/>
+	   <button class="btn btn-block btn-primary" style="background-color: #f8f9fa;color:black;border: 1px solid #ccc;" onclick="more()">点击加载更多</button>
+	 </div>
+    </div>
+	<script type="text/javascript">
+		var pn =1;
+		function more(){
+			pn = pn+1;
+			var UID = $("#UID").val();
+			var categoryId = $("#categoryId").val();
+			$.ajax({
+				url: '<%=request.getContextPath()%>/m/news/list?UID='+UID+'&pageNum='+pn+'&categoryId='+categoryId, 
+				type: 'GET',
+				contentType: "application/json;charset=UTF-8",
+				dataType: 'text',
+				success: function(data){
+					var parsedJson = $.parseJSON(data);
+					jQuery.each(parsedJson, function(index, itemData) {
+						 if(itemData.stick!=null){
+							 $("#table-view").append("<li class='table-view-cell media'><a data-transition='slide-in' href='"+itemData.url+"'><img class='media-object pull-left' width='92px' height='62px' src='"+itemData.pic+"'><div class='media-body'>"+itemData.title+"<p>"+itemData.intro+"</p></div><span class='badge badge-negative'>置顶</span></a></li>"); 
+						 }else{
+							 $("#table-view").append("<li class='table-view-cell media'><a data-transition='slide-in' href='"+itemData.url+"'><img class='media-object pull-left' width='92px' height='62px' src='"+itemData.pic+"'><div class='media-body'>"+itemData.title+"<p>"+itemData.intro+"</p></div></a></li>"); 
+
+						 }
+					});
+				}
+			});
+
+		}
+	
+	</script>
+  </body>
+</html>

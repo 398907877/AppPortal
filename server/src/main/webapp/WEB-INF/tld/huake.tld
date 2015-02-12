@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	
+		<description>huake JSP Tag Library</description>
+		<tlib-version>3.0</tlib-version>
+		<short-name>huake</short-name>
+		<uri>/huake</uri>
+	
+		<tag>
+		<description>
+			数据字典格式标签
+		</description>
+		<name>getTenancy</name>
+		<tag-class>com.huake.saas.base.tag.GetTenancy</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+		<tag>
+		<description>
+			app用户标签
+		</description>
+		<name>getMember</name>
+		<tag-class>com.huake.saas.base.tag.GetMember</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+		<tag>
+		<description>
+			抽奖活动标签
+		</description>
+		<name>getErine</name>
+		<tag-class>com.huake.saas.base.tag.GetErine</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+		<tag>
+		<description>
+			抽奖活动奖品项标签
+		</description>
+		<name>getErineItems</name>
+		<tag-class>com.huake.saas.base.tag.GetErineItems</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+</taglib>
